@@ -1,18 +1,20 @@
 package com.example.playground;
 
+import android.animation.IntEvaluator;
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.nineoldandroids.animation.IntEvaluator;
 
 /**
  * Custom Evaluator for changing a ViewGroup's height.
  */
 public class HeightEvaluator extends IntEvaluator {
 	private final View view;
+	private final Context context;
 	 
-	public HeightEvaluator(View dashboard) {
+	public HeightEvaluator(View dashboard, Context context) {
 		this.view = dashboard;
+		this.context = context;
 	}
  
 	@Override
